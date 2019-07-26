@@ -1,0 +1,15 @@
+{{include './header.html'}}
+<div class="register">
+    <div class="register-content">
+        <form action="/login" method="post">
+            <label>用户名：&#x3000;<input type="text" name="username"></label><span>{{error}}</span><br>
+            <label>密码：&#x3000;&#x3000;<input type="text" name="password"></label><span>{{errorpas}}</span><br>
+            <button type="submit">登录</button>
+            <a href="/register">前往注册</a>
+        </form>
+    </div>
+</div>
+<div class="rightinfo">
+    <p>登录</p>
+</div>
+{{include './footer.html'}}

@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+a{
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+body{
+    background: url("../pic/header-bg.jpg") no-repeat;
+    background-attachment: fixed;
+    padding-top: 50px;
+    margin: 0px;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
+    z-index: 50;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.container::after{
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+}
+.nav-list,.login {
+    display: flex;
+}
+.logo {
+    font-size: 30px;
+    color: rgb(255, 103, 0);
+    line-height: 50px;
+}
+.nav-list li {
+    line-height: 50px;
+}
+.nav-list li a{
+    display: block;
+    padding: 0px 10px;
+}
+.nav-list li:hover a{
+    color: #ff6700;
+}
+.hd{
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+}
+.register{
+    width: 400px;
+    height: 300px;
+    border: 1px solid transparent;
+    margin: 0 auto;
+}
+.register .register-content{
+    width: 400px;
+    height: 160px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 100px;
+    padding-top: 50px;
+    background-color: #fff;
+    margin-left: 30px;
+}
+.register-content button,.register-content a{
+    width: 60px;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.register-content a{
+    color: blue;
+    text-decoration: underline;
+}
+.register-content a:hover{
+    color: #ff6700;
+}
+
+.register-content span{
+    color: red;
+    margin-left: 10px;
+}
+ .username a{
+    color: blue;
+}
+ .username:hover a{
+    color: #ff6700;
+    text-decoration: underline;
+}
+
+.userinfo{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255,255,255,0.3);
+}
+.userinfo p,.userinfo input{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+}
+.userinfo label{
+    position: relative;
+    left: 180px;
+}
+.userinfo p span{
+    color: #ff6700;
+}
+.L-box{
+    width: 270px;
+    float: left;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.L-box div{
+    background: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.L-box h2 {
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background: #fff;
+}
+.L-box div ul{
+    padding: 10px;
+    overflow: hidden;
+}
+.about-me i {
+    width: 120px;
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.about-me i img{
+    width: 120px;
+    height: 120px;
+}
+.about-me p {
+    line-height: 24px;
+    font-size: 14px;
+}
+.wdxc li {
+    width: 32%;
+    overflow: hidden;
+    float: left;
+    height: 80px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+.wdxc li img{
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.L-box .search {
+    border: 1px solid #000;
+    background: #000;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+}
+.search input.input_text {
+    border: 0;
+    line-height: 36px;
+    height: 36px;
+    width: 72%;
+    padding-left: 10px;
+    outline: none;
+}
+.search input.input_submit {
+    border: 0;
+    background: 0;
+    color: #fff;
+    outline: none;
+    position: absolute;
+    top: 10px;
+    right: 8%;
+}
+.rightinfo{
+    background-color: rgb(255, 103, 0);
+    color: white;
+    position: fixed;
+    top: 60px;
+    right: -70px;
+    margin-right: 460px;
+    text-align: right;
+    padding: 0px 10px;
+}
+.rightinfo p{
+    margin: 16px;
+}
+.release,.main{
+    overflow: hidden;
+    width: 730px;
+    float: left;
+    display: block;
+    margin-left: 15px;
+    background-color: rgba(255,255,255,0.5);
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.release label input{
+    margin-bottom: 10px;
+    line-height: 20px;
+    outline: none;
+}
+.release label .title{
+    width: 350px;
+}
+.release .lab input{
+    width: 60px;
+    margin-left: 15px;
+
+}
+.release textarea{
+    width: 350px;
+    margin-left: 42px;
+    resize: none;
+    font-size: 16px;
+}
+.release button{
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    position: relative;
+    left: 40px;
+}
+.main li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed black;
+}
+.main li div{
+    margin-bottom: 15px;
+}
+.main li .title{
+    font-size: 20px;
+}
+.main li a{
+    color: #ff6800;
+}
+.main li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.main li .content,.main li .msg{
+    width: 245px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.details{
+    overflow: hidden;
+    width: 730px;
+    float: left;
+    display: block;
+    margin-left: 15px;
+    background-color: #ffffff;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.details li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed black;
+}
+.details li div{
+    margin-bottom: 15px;
+}
+.details li .title{
+    font-size: 30px;
+    color: black !important;
+    text-decoration: none !important;
+}
+.details li a{
+    color: #ff6800;
+}
+.details li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.reply p{
+    font-size: 18px;
+}
+.reply{
+    border-top: 1px dashed black;
+    border-bottom: none !important;
+}
+.details textarea{
+    width: 700px;
+    margin-left: 10px;
+    resize: none;
+    font-size: 16px;
+}
+.details button{
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.reply .replayUser{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.page{
+    background-color: #f0f0f0;
+    color: black;
+    position: fixed;
+    top: 180px;
+    right: -70px;
+    margin-right: 460px;
+    text-align: center;
+    padding: 0px 10px;
+}
+.page a{
+    color: #ff6700;
+    display: block;
+    margin: 10px;
+    width: 80px;
+}
+
+.page a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.delete{
+    margin-left: 15px;
+}
+
+
+.year{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.labelp{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.labelul a{
+    margin-left: 15px;
+    color: #ff6700;
+}
+.labelul a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.userinfoPic{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 180px;
+    top: 10px;
+}
+
+
+.userinfochange{
+    color: blue;
+    text-decoration: underline;
+    position: relative;
+    left: 180px;
+    font-size: 18px;
+}
+.userinfochange:hover{
+    color: red;
+}
+
+.userinfochange1{
+    position: relative;
+    left: 230px;
+    font-size: 18px;
+    width: 60px;
+    height: 30px;
+}
+
+.hoverPic{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    opacity: 0;
+    background-color: #fff;
+}
+.hoverPic:hover{
+    opacity: 1;
+    background-color: rgba(255,255,255,0.6);
+}
+.userinfoPic1{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 85px;
+    top: 35px;
+
+}
+
+.userinfoPic2{
+    width: 380px;
+    height: 380px;
+    position: relative;
+    left: 85px;
+    top: 35px;
+
+}
+.hoverPic2{
+    position: relative;
+    left: -300px;
+    top: -150px;
+    display: inline-block;
+    width: 380px;
+    height: 380px;
+    line-height: 380px;
+    text-align: center;
+    opacity: 0;
+    background-color: #fff;
+}
+.hoverPic2:hover{
+    opacity: 1;
+    background-color: rgba(255,255,255,0.6);
+}
+
+
+.headerPicButton{
+    width: 80px;
+    height: 40px;
+    position: relative;
+    top: -200px;
+}
+
+.userpic{
+    width: 60px;
+    height: 60px;
+}
+.userpic img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

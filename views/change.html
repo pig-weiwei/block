@@ -1,0 +1,18 @@
+{{include './header.html'}}
+
+<div class="release">
+    <form action="/change/{{changeData[0]._id}}" method="post">
+        <label>标题: <input type="text" name="title" class="title" required disabled value="{{changeData[0].title}}"></label><br>
+        <label class="lab">标签: <input type="text" name="lab" value="{{changeData[0].lab[0]}}" disabled><input type="text" name="lab" value="{{changeData[0].lab[1]}}" disabled ><input type="text" name="lab" value="{{changeData[0].lab[2]}}" disabled></label><br>
+
+        <label>
+            <p>内容：</p>
+            <textarea name="msg" id="" cols="30" rows="10" required >{{changeData[0].msg}}</textarea>
+        </label><br>
+        <button type="submit">编辑博客</button>
+    </form>
+</div>
+<div class="rightinfo">
+    <p>编辑页面</p>
+</div>
+{{include './footer.html'}}

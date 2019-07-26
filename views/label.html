@@ -1,0 +1,14 @@
+{{include './header.html'}}
+
+<div class="main">
+    <p class="labelp">标签如下</p>
+    <ul class="labelul">
+        {{each lb1 msgl i}}
+            <a href="/search/lab/{{msgl.toString()}}">{{msgl.toString()}}</a>
+        {{/each}}
+    </ul>
+</div>
+<div class="rightinfo">
+    <p>标签</p>
+</div>
+{{include './footer.html'}}

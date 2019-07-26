@@ -1,0 +1,17 @@
+{{include './header.html'}}
+<div class="userinfo">
+    <form action="/userinfochange/{{userinfochange.id}}" method="post">
+        <label>
+            <img src="{{userinfochange.headerPic}}" alt="头像加载失败，图片损坏" class="userinfoPic1">
+            <a class="hoverPic" href="/headerPic/{{userinfochange.id}}">编辑头像</a>
+        </label>
+        <p>姓名：{{userinfochange.username}}</p><br>
+        <label>简介：<input value="{{userinfochange.introduction}}" name="introduction"><span></span></input></label><br>
+        <label>邮箱： <input name="email" value="{{userinfochange.email}}"></input></label><br>
+        <button class="userinfochange1" type="submit">修改</button>
+    </form>
+</div>
+<div class="rightinfo">
+    <p>个人信息</p>
+</div>
+{{include './footer.html'}}

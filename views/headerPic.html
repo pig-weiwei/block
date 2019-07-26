@@ -1,0 +1,28 @@
+{{include './header.html'}}
+<div class="userinfo">
+
+
+    <form action="/headerPic/{{userinfochange.id}}" method="post" enctype="multipart/form-data">
+        <label for="headerPic">
+            <img src="{{userinfochange.headerPic}}" alt="头像加载失败，图片损坏" class="userinfoPic2">
+            <div class="hoverPic2">点击编辑头像</div>
+            <input type="file" name="headerPic" id="headerPic" hidden accept="image/*">
+        </label>
+        <button type="submit" class="headerPicButton">改变头像</button>
+    </form>
+
+
+</div>
+
+<div class="rightinfo">
+    <p>头像编辑</p>
+</div>
+
+<script>
+    document.querySelector('#headerPic').onchange = function(){
+        // console.log(this.files);
+        var file = this.files[0];
+        document.querySelector('.userinfoPic2').src = URL.createObjectURL(file);
+    }
+</script>
+{{include './footer.html'}}

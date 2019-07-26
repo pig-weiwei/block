@@ -1,0 +1,18 @@
+{{include './header.html'}}
+    <div class="register">
+        <div class="register-content">
+            <form action="/register" method="post">
+                <label>用户名：&#x3000;<input type="text" name="username" required></label><span>{{error}}</span><br>
+                <label>密码：&#x3000;&#x3000;<input type="text" name="password" minlength="6"></label><br>
+                <label>确认密码：<input type="text" name="repassword"></label><span>{{errorpas}}</span><br>
+                <label>邮箱地址：<input type="text" name="email"></label><br>
+                <label>自我介绍：<input type="text" name="introduction"></label><br>
+                <button type="submit">注册</button>
+                <a href="/login">前往登陆</a>
+            </form>
+        </div>
+    </div>
+<div class="rightinfo">
+    <p>注册</p>
+</div>
+{{include './footer.html'}}

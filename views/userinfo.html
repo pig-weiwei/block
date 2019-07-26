@@ -1,0 +1,12 @@
+{{include './header.html'}}
+    <div class="userinfo">
+        <img src="{{data.headerPic}}" alt="头像加载失败，图片损坏" class="userinfoPic">
+        <p>姓名：<span>{{data.username}}</span></p>
+        <p>简介：<span>{{data.introduction}}</span></p>
+        <p>邮箱：{{data.email}}</p>
+        <a href="/userinfochange/{{data.id}}" class="userinfochange">修改</a>
+    </div>
+    <div class="rightinfo">
+        <p>个人信息</p>
+    </div>
+{{include './footer.html'}}

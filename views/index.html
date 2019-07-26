@@ -1,0 +1,40 @@
+{{include './header.html'}}
+
+<div class="main">
+    <ul>
+        {{each msgs msg i}}
+        <li>
+            <div><a href="/details/{{msg._id}}" class="title">{{msg.title}}</a><br></div>
+            <div>作者是：<a href="/search/msglist/{{msg.author._id}}">{{msg.author.username}}</a>&nbsp;|
+                日期是：{{msg.time.second}}&nbsp;|
+                标签：
+                {{each msg.lab lab i}}
+                    {{if lab}}
+                    <a href="/search/lab/{{lab.toString()}}">{{lab.toString()}}</a>&#x3000;
+                    {{/if}}
+                {{/each}}
+                <br>
+            </div>
+            <div class="content">
+                {{msg.msg}}<br>
+            </div>
+            <div>
+                阅读：{{msg.readCount}}次&nbsp;|&nbsp;评论：{{msg.replay.length}}
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<div class="rightinfo">
+    <p>首页</p>
+</div>
+<div class="page">
+    {{if page!=1}}
+    <a href="/?page={{page-1}}">上一页</a>
+    {{/if}}
+    <p>第{{page}}页/共{{allpage}}页</p>
+    {{if page!=allpage}}
+    <a href="/?page={{page+1}}">下一页</a>
+    {{/if}}
+</div>
+{{include './footer.html'}}

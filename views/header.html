@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="hd">
+            <ul>
+                <li class="logo">猪猪的博客</li>
+            </ul>
+            <ul class="nav-list">
+                <li><a href="/">首页</a></li>
+                <li><a href="/saveFile">存档</a></li>
+                <li><a href="/label">标签</a></li>
+                <li><a href="/release">发布</a></li>
+                <ul class="login">
+                    {{if user}}
+                    <li class="userpic"><a  href="/userinfo/{{user.username}}"><img src="{{user.headerPic}}" alt=""></a></li>
+                    <li class="username"><a  href="/userinfo/{{user.username}}">{{user.username}}</a></li>
+                    <li><a href="/logout">退出</a></li>
+                    {{else}}
+                    <li><a href="/login">登录</a></li>
+                    <li><a href="/register">注册</a></li>
+                    {{/if}}
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="L-box">
+        <div class="about-me">
+            <h2>关于</h2>
+            <ul>
+                <i>
+                    <img src="/pic/头像.jpg" alt="">
+                </i>
+                <p>孙锐，一个00后男明星！19年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
+            </ul>
+        </div>
+        <div class="wdxc">
+            <h2>相册</h2>
+            <ul>
+                <li>
+                    <a href="javascript:;" title="古典个人博客模板《青砖屋檐》">
+                        <img src="/pic/21.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="个人博客模板《早安》"><img src="/pic/20.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="简单手工纸玫瑰"><img src="/pic/7.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="房前种菜，屋后栽花"><img src="/pic/6.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="陌上花开，可缓缓归矣"><img src="/pic/5.jpg"></a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="云南之行——丽江古镇玉龙雪山"><img src="/pic/4.jpg"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="/search" method="post" name="searchform" id="searchform">
+                <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+                <input name="Submit" class="input_submit" value="搜索" type="submit">
+            </form>
+        </div>
+    </div>

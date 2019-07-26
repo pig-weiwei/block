@@ -1,0 +1,40 @@
+{{include './header.html'}}
+
+<div class="main">
+    <ul>
+        <p class="year">2019年</p>
+        {{each saveFile msgl i}}
+        {{if msgl.time.year == '2019'}}
+        <li>
+            <div>
+                日期是：{{msgl.time.second}}&nbsp;|&#x3000;<a href="/details/{{msgl._id}}" class="title">{{msgl.title}}</a>
+            </div>
+        </li>
+        {{/if}}
+        {{/each}}
+        <p class="year">2018年</p>
+        {{each saveFile msgl i}}
+        {{if msgl.time.year == '2018'}}
+        <li>
+            <div>
+                日期是：{{msgl.time.second}}&nbsp;|&#x3000;<a href="/details/{{msgl._id}}" class="title">{{msgl.title}}</a>
+            </div>
+        </li>
+        {{/if}}
+        {{/each}}
+        <p class="year">2017年</p>
+        {{each saveFile msgl i}}
+        {{if msgl.time.year == '2017'}}
+        <li>
+            <div>
+                日期是：{{msgl.time.second}}&nbsp;|&#x3000;<a href="/details/{{msgl._id}}" class="title">{{msgl.title}}</a>
+            </div>
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+<div class="rightinfo">
+    <p>存档</p>
+</div>
+{{include './footer.html'}}

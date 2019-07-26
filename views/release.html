@@ -1,0 +1,18 @@
+{{include './header.html'}}
+
+<div class="release">
+    <form action="/release" method="post">
+        <label>标题: <input type="text" name="title" class="title" required></label><br>
+        <label class="lab">标签: <input type="text" name="lab"><input type="text" name="lab"><input type="text" name="lab"></label><br>
+
+        <label>
+            <p>内容：</p>
+            <textarea name="msg" id="" cols="30" rows="10" required></textarea>
+        </label><br>
+        <button type="submit">发布博客</button>
+    </form>
+</div>
+<div class="rightinfo">
+    <p>发布博客</p>
+</div>
+{{include './footer.html'}}
